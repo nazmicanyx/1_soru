@@ -1,18 +1,18 @@
 ﻿#include <stdio.h>
 
 void printFrequency(int arr[], int size) {
-    // elemanları ve frekansları yazdırmak için bir döngü
+    
     for (int i = 0; i < size; i++) {
         int count = 1;  // sayma değişkeni
         // elemanın diğer elemanlarla karşılaştırılması
         for (int j = i + 1; j < size; j++) {
             if (arr[i] == arr[j]) {
                 count++;
-                // her karşılaştırmadan sonra, bulunan öğeleri "0" olarak işaretleyerek işlem maliyetini azaltabiliriz
+               
                 arr[j] = 0;
             }
         }
-        // her elemanın frekansı yazdırılıyor
+        
         if (arr[i] != 0) {
             printf("%d : %d\n", arr[i], count);
         }
